@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: eb276accb4d36df488bdd45ac61e7f59
+  productGUID: 29ad235d143a33d489f12c05d63eeb8d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -91,7 +91,7 @@ PlayerSettings:
   visibleInBackground: 1
   allowFullscreenSwitch: 1
   graphicsJobMode: 0
-  fullscreenMode: 1
+  fullscreenMode: 3
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -696,12 +696,12 @@ PlayerSettings:
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
-    UNet: 0
+    UNet: 1
     Unity_Ads: 0
-  facebookSdkVersion: 
+  facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: d31f3a3c-c91f-43c4-9ddb-15424b22cd19
-  projectName: Become Unglued
+  cloudProjectId: 39c8846d-3c40-43f0-93ba-aed99bd353e8
+  projectName: Become Unglued (1)
   organizationId: contemporary-animation-inc
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

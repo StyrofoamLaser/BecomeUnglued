@@ -45,15 +45,18 @@ public class HeadsetToggle : MonoBehaviour {
         }
 	}
 
-    void SwitchPerspective()
+    public void SwitchPerspective()
     {
+        Debug.Log("switching persp");
         if (currentPerspective == PERSPECTIVES.RL)
         {
+            currentPerspective = PERSPECTIVES.VR;
             rigVR.gameObject.SetActive(true);
             rigRL.gameObject.SetActive(false);
         }
         else
         {
+            currentPerspective = PERSPECTIVES.RL;
             rigRL.gameObject.SetActive(true);
             rigVR.gameObject.SetActive(false);
         }

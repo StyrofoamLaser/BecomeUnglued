@@ -27,7 +27,6 @@ public class TouchpadMovement : MonoBehaviour {
 
         if (hand == null || hand.controller == null)
         {
-            Debug.Log("Controller not working");
             return;
         }
 

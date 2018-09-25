@@ -36,8 +36,9 @@ public class TouchpadMovement : MonoBehaviour {
 
             if (vrRig != null)
             {
+                var origY = vrRig.position.y;
                 vrRig.position += (transform.right * axis.x + transform.forward * axis.y) * Time.deltaTime * speed;
-                vrRig.position = new Vector3(vrRig.position.x, 0, vrRig.position.z);
+                vrRig.position = new Vector3(vrRig.position.x, origY, vrRig.position.z);
             }
         }
 		

@@ -11,6 +11,9 @@ public class HeadsetToggle : MonoBehaviour {
     [SerializeField]
     private Transform rigVR;
 
+    [SerializeField]
+    private Hand handVR;
+
     enum PERSPECTIVES
     {
         RL,
@@ -20,23 +23,20 @@ public class HeadsetToggle : MonoBehaviour {
     [SerializeField]
     private PERSPECTIVES currentPerspective;
 
-    private Hand hand;
-
     // Use this for initialization
     void Start () {
-        hand = GetComponent<Hand>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (hand == null || hand.controller == null)
+		if (handVR == null || handVR.controller == null || currentPerspective == PERSPECTIVES.RL)
         {
             return;
         }
-
-        if (hand.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
+        
+        if (handVR.controller.GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad))
         {
-            var axis = hand.controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0);
+            var axis = handVR.controller.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0);
 
             if (axis.y <= -0.5f)
             {

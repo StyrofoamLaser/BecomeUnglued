@@ -6,15 +6,15 @@ using UnityEngine;
 public class HeadsetToggle : MonoBehaviour {
 
     [SerializeField]
-    private Transform rigRL;
+    private Camera rlCam;
 
     [SerializeField]
-    private Transform rigVR;
+    private Camera vrCam;
 
     [SerializeField]
     private Hand handVR;
 
-    enum PERSPECTIVES
+    public enum PERSPECTIVES
     {
         RL,
         VR
@@ -51,14 +51,26 @@ public class HeadsetToggle : MonoBehaviour {
         if (currentPerspective == PERSPECTIVES.RL)
         {
             currentPerspective = PERSPECTIVES.VR;
-            rigVR.gameObject.SetActive(true);
-            rigRL.gameObject.SetActive(false);
         }
         else
         {
             currentPerspective = PERSPECTIVES.RL;
-            rigRL.gameObject.SetActive(true);
-            rigVR.gameObject.SetActive(false);
+        }
+    }
+
+    public void SwitchPerspectiveTo(PERSPECTIVES p)
+    {
+        currentPerspective = p;
+
+        if (currentPerspective == PERSPECTIVES.RL)
+        {
+            rlCam.enabled = true;
+            vrCam.enabled = false;
+        }
+        else
+        {
+            rlCam.enabled = false;
+            vrCam.enabled = true;
         }
     }
 }

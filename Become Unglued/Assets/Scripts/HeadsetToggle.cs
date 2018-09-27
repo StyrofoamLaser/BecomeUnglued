@@ -40,7 +40,6 @@ public class HeadsetToggle : MonoBehaviour {
 
         if (currentPerspective == PERSPECTIVES.RL)
         {
-            camRL.enabled = true;
             camRL.GetComponentInChildren<AudioListener>().enabled = true;
             camVR.enabled = false;
             camVR.GetComponentInChildren<AudioListener>().enabled = false;
@@ -50,7 +49,6 @@ public class HeadsetToggle : MonoBehaviour {
         }
         else
         {
-            camRL.enabled = false;
             camRL.GetComponentInChildren<AudioListener>().enabled = false;
             camVR.enabled = true;
             camVR.GetComponentInChildren<AudioListener>().enabled = true;

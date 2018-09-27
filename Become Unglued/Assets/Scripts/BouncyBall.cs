@@ -27,7 +27,7 @@ public class BouncyBall : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        AddBounce();
         GetComponent<AudioSource>().Play();
+        AddBounce();
     }
 }

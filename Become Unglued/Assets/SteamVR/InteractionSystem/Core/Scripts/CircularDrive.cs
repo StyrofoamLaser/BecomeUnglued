@@ -275,8 +275,9 @@ namespace Valve.VR.InteractionSystem
 			// Need a non-zero distance from the hand to the center of the CircularDrive
 			if ( toTransform.sqrMagnitude > 0.0f )
 			{
-                toTransformProjected = Vector3.ProjectOnPlane( toTransform, transform.parent.localToWorldMatrix.MultiplyVector(worldPlaneNormal)).normalized * -1;
-			}
+                //toTransformProjected = Vector3.ProjectOnPlane( toTransform, transform.parent.worldToLocalMatrix.MultiplyVector(worldPlaneNormal)).normalized;
+                toTransformProjected = Vector3.ProjectOnPlane(toTransform, worldPlaneNormal).normalized;
+            }
 			else
 			{
 				Debug.LogFormat( "The collider needs to be a minimum distance away from the CircularDrive GameObject {0}", gameObject.ToString() );
@@ -462,9 +463,10 @@ namespace Valve.VR.InteractionSystem
 					{
 						Vector3 cross = Vector3.Cross( lastHandProjected, toHandProjected ).normalized;
                         
-                        float dot = Vector3.Dot(transform.parent.localToWorldMatrix.MultiplyVector(worldPlaneNormal) * -1, cross );
+                        //float dot = Vector3.Dot(transform.parent.worldToLocalMatrix.MultiplyVector(worldPlaneNormal), cross );
+                        float dot = Vector3.Dot(worldPlaneNormal, cross);
 
-						float signedAngleDelta = absAngleDelta;
+                        float signedAngleDelta = absAngleDelta;
 
 						if ( dot < 0.0f )
 						{

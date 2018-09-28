@@ -21,7 +21,7 @@ public class HeadsetToggle : MonoBehaviour {
     };
 
     [SerializeField]
-    private PERSPECTIVES currentPerspective;
+    public PERSPECTIVES currentPerspective;
 
     [SerializeField]
     private List<GameObject> vrObjs;

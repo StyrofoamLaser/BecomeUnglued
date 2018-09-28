@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4807535604911336}
   - component: {fileID: 114480065645619790}
   - component: {fileID: 114869651322768230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33712659321535748}
   - component: {fileID: 23129037288169050}
   - component: {fileID: 65999960795604614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 33822862349624782}
   - component: {fileID: 23865491872308296}
   - component: {fileID: 65258275707984324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 1747945353276350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0.51}
-  m_LocalScale: {x: 0.1, y: 2, z: 1}
+  m_LocalScale: {x: 0.1, y: 2, z: 1.25}
   m_Children: []
   m_Father: {fileID: 4807535604911336}
   m_RootOrder: 1
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1160769871316992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.587, y: 0, z: 0}
+  m_LocalPosition: {x: -4.946, y: 0, z: -0.561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4387891789205634}
@@ -239,7 +239,7 @@ MonoBehaviour:
   childCollider: {fileID: 65999960795604614}
   linearMapping: {fileID: 0}
   hoverLock: 1
-  limited: 0
+  limited: 1
   frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
   onFrozenDistanceThreshold:
     m_PersistentCalls:
